@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        #include < stdio.h >  <br>
+            int main()     <br>             
+            { <br>
+                int n; <br>
+                scanf("%d", &n); // Task 01 <br>
+                int prices[n]; <br>
+                for (int i = 0; i < n; i++) <br>
+                    scanf("%d", &prices[i]); // Task 02 <br>
+            
+                int max = prices[1] - prices[0]; <br>
+                for (int i = 0; i < n; i++) <br>
+                    for (int j = i + 1; j < n; j++) <br>
+                        if (prices[j] - prices[i] > max) <br>
+                            max = prices[j] - prices[i]; <br>
+                // Task 03 <br>
+            
+                if (max >= 0) <br>
+                    printf("%d\n", max); <br>
+                else <br>
+                    printf("0\n"); <br>
+                // Task 04 <br>
+                return 0; <br>
+            } <br>
+    </p>
+</body>
+</html>
